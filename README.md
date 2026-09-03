@@ -29,13 +29,10 @@
 ### 2. Snapshot & System Health Report
 ![System Snapshot](assets/snapshot_preview.png)
 
-### 3. Top Process & Hardware Sensor Inspection
-![Sensors and Processes](assets/process_sensors_preview.png)
+### 3. Top Process Snapshot
+![Sensors and Processes](assets/top_processes.png)
 
 </div>
-
-> [!TIP]
-> Place your screenshot images inside the `assets/` folder with filenames `dashboard_preview.png`, `snapshot_preview.png`, and `process_sensors_preview.png`.
 
 ---
 
