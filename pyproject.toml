@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmon-cli"
+version = "1.0.0"
+description = "Real-time system monitoring & resource dashboard in your terminal"
+readme = "README.md"
+authors = [{ name = "Developer" }]
+requires-python = ">=3.9"
+dependencies = [
+    "psutil>=5.9.0",
+    "rich>=13.7.0",
+    "typer>=0.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[project.scripts]
+sysmon = "sysmon.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sysmon*"]
