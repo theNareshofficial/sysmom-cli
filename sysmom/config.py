@@ -1,5 +1,5 @@
 """
-Configuration and settings for SysMon CLI.
+Configuration and settings for SysMom CLI.
 """
 
 from dataclasses import dataclass, field
