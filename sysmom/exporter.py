@@ -7,9 +7,9 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-from sysmon.config import DEFAULT_CONFIG
-from sysmon.dashboard import DashboardRenderer
-from sysmon.monitor import SystemSnapshot, format_bytes
+from sysmom.config import DEFAULT_CONFIG
+from sysmom.dashboard import DashboardRenderer
+from sysmom.monitor import SystemSnapshot, format_bytes
 
 
 def snapshot_to_dict(snap: SystemSnapshot) -> dict:
