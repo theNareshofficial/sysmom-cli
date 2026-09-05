@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sysmon-cli"
+name = "sysmom-cli"
 version = "1.0.0"
 description = "Real-time system monitoring & resource dashboard in your terminal"
 readme = "README.md"
@@ -21,8 +21,9 @@ dev = [
 ]
 
 [project.scripts]
-sysmon = "sysmon.cli:app"
+sysmom = "sysmom.cli:app"
+SysMom = "sysmom.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["sysmon*"]
+include = ["sysmom*"]
