@@ -55,8 +55,11 @@ env.bak/
 venv.bak/
 
 # Generated reports & logs
-sysmon_report.json
-sysmon_report.md
+sysmom_report.json
+sysmom_report.md
+SysMom_report.json
+SysMom_report.md
+test_report.json
 *.log
 
 # IDE specific files
