@@ -53,7 +53,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/sysmon-cli.git
+git clone https://github.com/theNareshofficial/sysmom-cli.gitgit
 cd sysmon-cli
 ```
 
