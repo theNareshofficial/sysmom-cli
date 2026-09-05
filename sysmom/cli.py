@@ -1,5 +1,5 @@
 """
-Command-line interface (CLI) entry point for SysMon.
+Command-line interface (CLI) entry point for SysMom.
 """
 
 import json
@@ -21,15 +21,15 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from sysmon import __version__
-from sysmon.config import Config, DEFAULT_CONFIG
-from sysmon.dashboard import run_live_dashboard
-from sysmon.exporter import print_console_snapshot, snapshot_to_dict, snapshot_to_markdown
-from sysmon.monitor import SystemMonitor, format_bytes
+from sysmom import __version__
+from sysmom.config import Config, DEFAULT_CONFIG
+from sysmom.dashboard import run_live_dashboard
+from sysmom.exporter import print_console_snapshot, snapshot_to_dict, snapshot_to_markdown
+from sysmom.monitor import SystemMonitor, format_bytes
 
 app = typer.Typer(
-    name="sysmon",
-    help="SysMon CLI: Real-Time System Monitoring & Resource Dashboard",
+    name="sysmom",
+    help="SysMom CLI: Real-Time System Monitoring & Resource Dashboard",
     add_completion=False,
 )
 console = Console()
@@ -55,7 +55,7 @@ def main(
     ] = None,
 ):
     if version:
-        console.print(f"[bold cyan]SysMon CLI[/bold cyan] version [green]{__version__}[/green]")
+        console.print(f"[bold cyan]SysMom CLI[/bold cyan] version [green]{__version__}[/green]")
         raise typer.Exit()
 
     if ctx.invoked_subcommand is None:
@@ -216,10 +216,10 @@ def export(
 
     if format.lower() == "md" or format.lower() == "markdown":
         content = snapshot_to_markdown(snap)
-        default_file = "sysmon_report.md"
+        default_file = "sysmom_report.md"
     else:
         content = json.dumps(snapshot_to_dict(snap), indent=2)
-        default_file = "sysmon_report.json"
+        default_file = "sysmom_report.json"
 
     target_path = output or Path(default_file)
     target_path.write_text(content, encoding="utf-8")
