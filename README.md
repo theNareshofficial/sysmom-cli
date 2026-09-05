@@ -1,4 +1,4 @@
-# ⚡ SysMon CLI
+# ⚡ SysMom CLI
 
 <div align="center">
 
@@ -53,8 +53,8 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/theNareshofficial/sysmom-cli.gitgit
-cd sysmon-cli
+git clone https://github.com/theNareshofficial/sysmom-cli.git
+cd sysmom-cli
 ```
 
 ### 2. Install dependencies
@@ -73,26 +73,28 @@ pip install -e .
 
 ### Launch Live Interactive Dashboard
 ```bash
-python -m sysmon.cli
+python -m sysmom.cli
+# or if installed via pip:
+sysmom
 ```
 
 ### Subcommands & Options
 
 | Command | Description |
 |:---|:---|
-| `python -m sysmon.cli` | Launch full interactive live dashboard |
-| `python -m sysmon.cli snapshot` | Print a quick point-in-time system health summary |
-| `python -m sysmon.cli top` | View top resource-consuming processes |
-| `python -m sysmon.cli disk` | Show storage partition breakdown and disk I/O |
-| `python -m sysmon.cli net` | Show network interfaces, IP addresses, and traffic |
-| `python -m sysmon.cli sensors` | View hardware fan speeds and temperatures |
-| `python -m sysmon.cli export --format json` | Save a snapshot to `sysmon_report.json` |
-| `python -m sysmon.cli export --format md` | Save a snapshot to `sysmon_report.md` |
+| `python -m sysmom.cli` | Launch full interactive live dashboard |
+| `python -m sysmom.cli snapshot` | Print a quick point-in-time system health summary |
+| `python -m sysmom.cli top` | View top resource-consuming processes |
+| `python -m sysmom.cli disk` | Show storage partition breakdown and disk I/O |
+| `python -m sysmom.cli net` | Show network interfaces, IP addresses, and traffic |
+| `python -m sysmom.cli sensors` | View hardware fan speeds and temperatures |
+| `python -m sysmom.cli export --format json` | Save a snapshot to `sysmom_report.json` |
+| `python -m sysmom.cli export --format md` | Save a snapshot to `sysmom_report.md` |
 
 ### Customizing Dashboard Parameters
 ```bash
 # Refresh every 1.5 seconds, display top 10 processes, sorted by memory
-python -m sysmon.cli dashboard --refresh 1.5 --limit 10 --sort-by memory
+python -m sysmom.cli dashboard --refresh 1.5 --limit 10 --sort-by memory
 ```
 
 ---
