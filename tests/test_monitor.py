@@ -1,14 +1,14 @@
 """
-Unit tests for SysMon CLI metric collectors, exporters, and CLI commands.
+Unit tests for SysMom CLI metric collectors, exporters, and CLI commands.
 """
 
 import json
 import pytest
 from typer.testing import CliRunner
 
-from sysmon.cli import app
-from sysmon.exporter import snapshot_to_dict, snapshot_to_markdown
-from sysmon.monitor import (
+from sysmom.cli import app
+from sysmom.exporter import snapshot_to_dict, snapshot_to_markdown
+from sysmom.monitor import (
     FanSensor,
     HardwareSensors,
     SystemMonitor,
