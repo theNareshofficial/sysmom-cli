@@ -1,5 +1,5 @@
 """
-Interactive Rich Terminal User Interface (TUI) Dashboard for SysMon.
+Interactive Rich Terminal User Interface (TUI) Dashboard for SysMom.
 """
 
 import sys
@@ -23,8 +23,8 @@ from rich.text import Text
 from rich.progress_bar import ProgressBar
 from rich.live import Live
 
-from sysmon.config import Config, DEFAULT_CONFIG
-from sysmon.monitor import SystemMonitor, SystemSnapshot, format_bytes
+from sysmom.config import Config, DEFAULT_CONFIG
+from sysmom.monitor import SystemMonitor, SystemSnapshot, format_bytes
 
 
 def get_threshold_style(value: float, warn: float, crit: float) -> str:
@@ -296,7 +296,7 @@ class DashboardRenderer:
         layout["processes"].update(self.make_process_table(snap))
 
         footer_text = Text()
-        footer_text.append("SysMon CLI", style="bold cyan")
+        footer_text.append("SysMom CLI", style="bold cyan")
         footer_text.append(" | Refresh: ", style="dim")
         footer_text.append(f"{self.config.refresh_rate}s", style="bold yellow")
         footer_text.append(" | Press ", style="dim")
